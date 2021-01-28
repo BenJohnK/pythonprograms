@@ -1,7 +1,7 @@
 number1=int(input("Enter number 1"))
 number2=int(input("Enter number 2"))
 number3=int(input("Enter number 3"))
-if number1.__gt__(number2):
+if int.__gt__(number1, number2):
     temp = number1
     f = 0
 else:
@@ -32,5 +32,4 @@ else:
     else:
         print(number2)
         print(number1)
-
 
