@@ -6,4 +6,3 @@ for i in range(x):
     specialnumber = (specialnumber*10)+x
 
 print(sum)
-
