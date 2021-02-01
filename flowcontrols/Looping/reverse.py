@@ -4,7 +4,7 @@ num=int(number)
 val=''
 i=0
 n1=0
-while(i<x):
+while(num!=0):
     n1=num%10
     val=val+str(n1)
     num=num//10
