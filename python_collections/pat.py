@@ -1,4 +1,3 @@
-
 lst=[]
 list_length=int(input("Enter list length"))
 for i in range(list_length):
