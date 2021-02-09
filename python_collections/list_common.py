@@ -11,11 +11,19 @@ list_length2=int(input("Enter length of second list"))
 for i in range(list_length2):
     ele = int(input("Enter element"))
     lst2.append(ele)
-
-for i in range(0,list_length):
-    for j in range(0,list_length2):
-        if lst[i]==lst2[j]:
-            lst3.append(lst[i])
+j=0
+i=0
+lst.sort()
+lst2.sort()
+while i<list_length:
+    if lst[i]>lst2[j]:
+        j=j+1
+    elif lst[i]<lst2[j]:
+        i=i+1
+    else:
+        lst3.append(lst[i])
+        i=i+1
+        j=j+1
 
 print(lst3)
 
