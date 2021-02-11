@@ -1,7 +1,6 @@
 text="hello hello hi hi hi how hi hello"
 words=text.split(" ")
 dict={}
-print(words)
 for word in words:
     if word not in dict:
         dict[word]=1
@@ -16,3 +15,5 @@ for ele in dict:
         name=ele
 print(name)
 
+data=sorted(dict,key=dict.get,reverse=True)
+print(data[0])
