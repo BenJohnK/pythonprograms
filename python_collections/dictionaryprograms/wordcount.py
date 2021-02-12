@@ -17,3 +17,4 @@ print(name)
 
 data=sorted(dict,key=dict.get,reverse=True)
 print(data[0])
+print(data)
