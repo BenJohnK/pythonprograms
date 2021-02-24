@@ -11,4 +11,3 @@ for lines in f:
 print(dit)
 print((max(dit,key=dit.get)))
 
-

@@ -25,3 +25,26 @@ for student in students:
             name=student.name
 
 print(large, name)
+
+upper=list(map(lambda x: x.name.upper(),students))
+print(upper)
+
+# listr=[1,2,5,4]
+# listr.sort()
+# print(listr)
+bonus=list(map(lambda x:x.total+50,students))
+print(bonus)
+
+mca_list=list(filter(lambda x:x.course=="mca",students))
+mca_names=list(map(lambda x: x.name,mca_list))
+for x in mca_list:
+    print(x.name)
+    print(x.course)
+    print(x.total)
+print(mca_names)
+
+x=max(list(map(lambda x:x.total,students)))
+print(x)
+name=list(filter(lambda st:st.total==x,students))
+print(name)
+
