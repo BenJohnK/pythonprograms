@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Sign in to FaceBook</title>
+    <style>
+        body{
+            background-color: #ebeff5;
+        }
+        .center{
+            width: 30%;
+            margin: auto;
+            padding: 5px;
+            
+        }
+        .singleline input{
+            float: left;
+            margin-bottom: 10px;
+        }
+        input{
+            margin-bottom: 10px;
+        }
+        /* Modify the background color */ 
+          
+        .navbar-custom { 
+            background-color: #3E5C9A; 
+        } 
+        /* Modify brand and text color */ 
+          
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .navbar-text { 
+            color: white; 
+            margin-left: 25%;
+        } 
+    </style>
+</head>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-custom">
+        <a class="navbar-brand" href="#">Facebook</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <form style="margin-left: 50%;" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+</header>
+<body>
+    <div class="container">
+        <div class="center">
+            <h2>Create a new account</h2>
+            <p style="color: slategray;">It's quick and easy</p>
+            <form method="" action="">
+            <div class="singleline">
+            <input class="form-control" type="text" style="width: 55%;" placeholder="FirstName">
+            <input class="form-control" type="text" style="width: 41.5%;margin-left: 10px;" placeholder="Surname">
+            </div>
+            
+            <input class="form-control" type="email" placeholder="Mobile Number or Email Address"/>
+            
+            <input class="form-control" type="password" placeholder="New Password">
+            <label style="color:slategrey;"><strong>Date of birth</strong></label><br>
+            <select>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <select>
+                <option value="Jan">Jan</option>
+                <option value="Feb">Feb</option>
+                <option value="Mar">Mar</option>
+            </select>
+            <select style="margin-bottom: 10px;">
+                <option value="">1990</option>
+                <option value="">1991</option>
+                <option value="">1992</option>
+            </select>
+            <br>
+            <label style="color: slategrey;margin-bottom: 10px;"><strong>Gender</strong></label>
+            <br>
+            <input type="radio" id="female" style="margin-left: 10px;" name="gender"><label for="female">Female</label><input type="radio" id="male" style="margin-left:10px" name="gender"><label for="male">Male</label><input type="radio" id="custom" style="margin-left: 10px;" name="gender"><label for="custom">Custom</label>
+            <br>
+            <div style="width: 80%;">
+                <p><small>By clicking Sign Up, you agree to our Terms, Data Policy and Cookie Policy. You may receive SMS notifications from us and can opt out at any time</small></p>
+            </div>
+            <input class="btn btn-success" style="width: 50%;" type="submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
