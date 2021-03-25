@@ -14,12 +14,46 @@
     float: left;
     background-color: salmon;
 }
-body{
+/* body{
     background-color: aqua;
-}
+} */
 .upper{
-    border:3px solid brown
-    border-radius: 20px;
-    width: 95%; margin: auto;
-    
+    border:3px solid brown;
+    width: 95%; 
+    margin: auto;
 }
+#box1{
+    background-color: brown;
+}
+#box2{
+    background-color:chartreuse;
+    margin-top: 345px;
+}
+.box{
+    height: 150px;
+    border: 1px solid blue;
+    text-align: center;
+}
+.boxed{
+    height: 500px;
+    width: 18%;
+    float: left;
+    margin-right: 7px;
+}
+#boxed1{
+background-color: darkblue;
+margin-left: 30px;
+}
+#boxed2{
+ background-color: lightseagreen;
+}
+#boxed3{
+    background-color: red;
+}
+#boxed4{
+    background-color: violet;
+}
+#boxed5{
+    background-color: yellow;
+}
+
