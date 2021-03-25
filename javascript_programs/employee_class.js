@@ -27,4 +27,6 @@ employees.sort((emp1,emp2)=>emp1.salary-emp2.salary)
 console.log(employees)
 var max_sal=employees.reduce((n1,n2)=>n1.salary>n2.salary?n1.salary:n2.salary)
 console.log(max_sal)
+var min_sal=employees.reduce((n1,n2)=>n1.salary<n2.salary?n1.salary:n2.salary)
+console.log(min_sal)
 
