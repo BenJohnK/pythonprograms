@@ -1198,6 +1198,12 @@ var dataset=[
       "id": 200,
       "title": "ipsam aperiam voluptates qui",
       "completed": false
+    },
+    {
+      "userId": 11,
+      "id": 201,
+      "title": "ipsam aperiam voluptates qui",
+      "completed": true
     }
   ]
 //   var completed_list=[]
@@ -1228,7 +1234,7 @@ var user_ids_cleaned=Array.from(new Set(user_ids))
 // console.log(user_ids_cleaned)
 var eachuser_completed_tasks=[]
 for(i=1;i<=user_ids_cleaned.length;i++){
-  eachuser_completed_tasks=dataset.filter(emp=>(emp.completed==true)&&emp.userId==i)
+  eachuser_completed_tasks=dataset.filter(emp=>(emp.completed==true)&&(emp.userId)==i)
   console.log("No. of completed tasks of user "+i+":"+eachuser_completed_tasks.length)
 }
 

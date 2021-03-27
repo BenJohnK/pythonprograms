@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        body{
+            background-color: teal;
+        }
+        .top-setter{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+   <div style="width: 40%;margin: auto;border: 1px solid silver;background-color: black;padding:10px;height: auto;margin-top: 30px;padding-bottom: 20px;border-radius: 3%;">
+        <div style="background-color:#a7a7a7;height: 110px;padding-top: 15px;padding-right: 5px;">
+
+            <p id="computation" style="margin:0;padding:0;float: right;font-size: 20px;display: block;">&nbsp;</p>
+            <p id="entry-result" style="clear:both;margin:0;padding:0;font-size: 40px;float: right;">Hello</p>
+    
+        </div>
+        <hr style="border: 0.5px solid silver;">
+        <div style="padding-left: 4px;">
+        <button value="" class="btn btn-dark digit" style="width: 24%;">(</button>
+        <button value="" class="btn btn-dark digit" style="width: 24%;">)</button>
+        <button value="" class="btn btn-dark digit" style="width: 24%;">%</button>
+        <button value="" class="btn btn-dark digit" style="width: 24%;">CE</button>
+        <br>
+        <button value="7" class="btn btn-dark top-setter digit" style="width: 24%;">7</button>
+        <button value="8" class="btn btn-dark top-setter digit" style="width: 24%;">8</button>
+        <button value="9" class="btn btn-dark top-setter digit" style="width: 24%;">9</button>
+        <button value="/" class="btn btn-dark top-setter digit" style="width: 24%;">/</button>
+        <br>
+        <button value="4" class="btn btn-dark top-setter digit" style="width: 24%;">4</button>
+        <button value="5" class="btn btn-dark top-setter digit" style="width: 24%;">5</button>
+        <button value="6" class="btn btn-dark top-setter digit" style="width: 24%;">6</button>
+        <button value="x" class="btn btn-dark top-setter digit" style="width: 24%;">x</button>
+        <br>
+        <button value="1" class="btn btn-dark top-setter digit" style="width: 24%;">1</button>
+        <button value="2" class="btn btn-dark top-setter digit" style="width: 24%;">2</button>
+        <button value="3" class="btn btn-dark top-setter digit" style="width: 24%;">3</button>
+        <button value="-" class="btn btn-dark top-setter digit" style="width: 24%;">-</button>
+        <br>
+        <button value="0" class="btn btn-dark top-setter digit" style="width: 24%;">0</button>
+        <button value="." class="btn btn-dark top-setter digit" style="width: 24%;">.</button>
+        <button value="=" class="btn btn-dark top-setter digit" style="width: 24%;">=</button>
+        <button value="+" class="btn btn-dark top-setter digit" style="width: 24%;">+</button>
+        </div>
+   </div>
+<script src="cal_script.js"></script>
+</body>
+</html>
