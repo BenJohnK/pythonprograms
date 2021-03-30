@@ -20,5 +20,8 @@ class Bank{
         }
     }
 }
-var p1=new Bank(100,"ben",3000);
-p1.withdraw(3000)
+function accept(){
+    var p1=new Bank(100,"ben",3000);
+    p1.withdraw(200)
+}
+accept()

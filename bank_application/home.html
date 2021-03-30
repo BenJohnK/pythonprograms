@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Bank-Home</title>
+    <style>
+        input{
+            margin-bottom: 10px;
+        }
+        body{
+            background-color: #87ceeb;
+        }
+    </style>
+</head>
+<body>
+    <div style="width: 40%;margin: auto;">
+        <div class="card card-body" style="margin-top:150px;">
+            <form id="activity-form">
+                <h2 style="text-align: center;">ABC Bank</h2>
+                <input class="form-control" type="text" id="acco" name="accnumber" style="width: 100%;" placeholder="Enter Account Number" required>
+                <input class="form-control" type="password" id="pass" name="passw" style="width: 100%;" placeholder="Enter Password" required>
+                <input class="form-control" type="text" id="amount" name="amount" style="width: 100%;" placeholder="Enter amount" required>
+                <button class="btn btn-primary" style="width: 49%;">Deposit</button>
+                <button class="btn btn-success" style="width: 49%;">Withdraw</button>
+            </form>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

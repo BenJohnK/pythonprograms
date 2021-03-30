@@ -12,4 +12,9 @@ single_list_element.style.color="cyan"
 console.log(typeof(single_list_element))
 var head=document.head
 console.log(typeof(head))
-
+function res(){
+    alert('hi')
+    var r=document.getElementById('input-field').value
+    result=eval(r)
+    alert(result)
+}
