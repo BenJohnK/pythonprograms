@@ -37,23 +37,12 @@
 //     }
 
 // })
+
+var user_details=JSON.parse(window.localStorage.getItem('user_details'))
+
 class Bank{
-    static getUserDetails(accno=0,balance=0){
-        var user_details={
-            1000:{"name":"arjun","password":"testone","balance":3000},
-            1001:{"name":"ajay","password":"testtwo","balance":3000},
-            1002:{"name":"arjun","password":"testthree","balance":3000},
-            1003:{"name":"ajay","password":"testfour","balance":3000},
-        }
-        if(accno==0&&balance==0){
-            return user_details
-        }
-        alert('hey')
-        user_details[accno]['balance']=balance 
-        alert(user_details[accno]['balance'])       
-    }
     static authenticate(accno,pwd){
-        var user_details=Bank.getUserDetails()
+        
         if(accno in user_details){
             if(pwd==user_details[accno]["password"]){
                 return 1
@@ -72,6 +61,12 @@ class Bank{
         var user=Bank.authenticate(accno,pwd)
         if(user==1){
             alert("login success")
+            var user_login={
+                accountnumber:accno,
+                password:pwd
+            }
+            window.localStorage.setItem('user',JSON.stringify(user_login))
+            window.location.href="home.html"
         }
         else if(user==-1){
             console.log("incorrect password")
@@ -83,28 +78,40 @@ class Bank{
         }
     }
     static transaction(clicked_object){
-        var accno=document.querySelector('#acco').value
-        var pwd=document.querySelector('#pass').value
+        var login_details=JSON.parse(window.localStorage.getItem('user'))
+        var accno=login_details['accountnumber']
+        var pwd=login_details['password']
         var user = Bank.authenticate(accno,pwd)
         if(user==1){
             var amount=document.getElementById('amount').value
-            var user_details=Bank.user_details
-            if(clicked_object.getAttribute('action')=='deposit'){
-                user_details[accno]['balance']+=parseInt(amount)
-                alert("Deposited! Your balance is"+user_details[accno]['balance'])
-                Bank.getUserDetails(accno,user_details[accno]['balance'])
-            }
-            else{
-                if(user_details[accno]['balance']>=amount){
-                    user_details[accno]['balance']-=amount
-                    alert("Withdrawn! Your balance is"+user_details[accno]['balance'])
-                    Bank.getUserDetails(accno,user_details[accno]['balance'])
+            if(amount!=''){
+                if(clicked_object.getAttribute('action')=='deposit'){
+                    user_details[accno]['balance']+=parseInt(amount)
+                    alert("Deposited! Your balance is"+user_details[accno]['balance'])
+                    window.localStorage.setItem('user_details',JSON.stringify(user_details))
                 }
                 else{
-                    alert("Transaction Failed, Insufficient balance")
+                    if(user_details[accno]['balance']>=amount){
+                        user_details[accno]['balance']-=amount
+                        alert("Withdrawn! Your balance is"+user_details[accno]['balance'])
+                        window.localStorage.setItem('user_details',JSON.stringify(user_details))
+                    }
+                    else{
+                        alert("Transaction Failed, Insufficient balance")
+                    }
                 }
             }
         }
+        else if(user==-1){
+            alert('incorrect password.')
+        }
+        else{
+            alert('invalid account number')
+        }
+    }
+    static logout(){
+        window.localStorage.removeItem('user')
+        window.location.href="login.html"
     }
 }
 

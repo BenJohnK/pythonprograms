@@ -18,14 +18,14 @@
 <body>
     <div style="width: 40%;margin: auto;">
         <div class="card card-body" style="margin-top:150px;">
-            <form id="login-form">
                 <h2 style="text-align: center;">ABC Bank</h2>
+                <form>
                 <input class="form-control" type="text" id="acco" name="accnumber" style="width: 100%;" placeholder="Enter Account Number" required>
                 <input class="form-control" type="password" id="pass" name="passw" style="width: 100%;" placeholder="Enter Password" required>
-                <input type="submit" class="btn btn-primary btn-block" value="Login">
-            </form>
+                <button type="button" class="btn btn-primary btn-block" onclick="Bank.login()">Login</button>
+                </form>
         </div>
     </div>
-<script src="script.js"></script>
+<script src="script_temp.js"></script>
 </body>
 </html>
